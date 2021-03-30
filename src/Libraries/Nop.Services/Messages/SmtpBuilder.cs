@@ -59,7 +59,7 @@ namespace Nop.Services.Messages
                 await client.ConnectAsync(
                     emailAccount.Host,
                     emailAccount.Port,
-                    emailAccount.EnableSsl ? SecureSocketOptions.SslOnConnect : SecureSocketOptions.StartTlsWhenAvailable);
+                    emailAccount.EnableSsl ? SecureSocketOptions.SslOnConnect : SecureSocketOptions.None);
 
                 if (emailAccount.UseDefaultCredentials)
                 {
